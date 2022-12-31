@@ -4,6 +4,8 @@ An example how to use [Tonic](https://github.com/hyperium/tonic) with Bazel
 
 ![Portal](/demo.png "game poster")
 
+[![CI](https://github.com/realtimetodie/bazel-rust-grpc-aperture/actions/workflows/ci.yaml/badge.svg)](https://github.com/realtimetodie/bazel-rust-grpc-aperture/actions/workflows/ci.yaml)
+
 ## Getting started
 
 Hello, and again, welcome to the Aperture Science Enrichment Center.
