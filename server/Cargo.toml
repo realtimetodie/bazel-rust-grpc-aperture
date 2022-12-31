@@ -1,0 +1,9 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aperture_proto = { path = "../proto/aperture" }
+tokio = { version = "1.23", features = ["rt-multi-thread"] }
+tonic = "0.8"

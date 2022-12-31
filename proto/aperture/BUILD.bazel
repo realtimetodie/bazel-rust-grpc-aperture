@@ -1,0 +1,31 @@
+load("@crate_index//:defs.bzl", "crate_deps")
+load("//tools/rust_proto:index.bzl", "rust_proto_library")
+
+package(default_visibility = ["//visibility:private"])
+
+rust_proto_library(
+    name = "rust_default_library",
+    srcs = ["src/lib.rs"],
+    crate_name = "aperture_proto",
+    proc_macro_deps = crate_deps(
+        ["prost-derive"],
+        "proto/aperture",
+    ),
+    protos = [
+        "//proto/aperture/demo:proto_files",
+        "//proto/aperture/demo/a:proto_files",
+        "//proto/aperture/demo/a/b:proto_files",
+        "//proto/aperture/demo/a/b/c:proto_files",
+        "//proto/aperture/helloworld:proto_files",
+    ],
+    root = "aperture",
+    visibility = ["//server:__pkg__"],
+    deps = crate_deps(
+        [
+            "prost",
+            "prost-types",
+            "tonic",
+        ],
+        "proto/aperture",
+    ),
+)

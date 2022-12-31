@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "proto/aperture",
+    "server",
+    "tools/rust_proto"
+]

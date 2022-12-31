@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package aperture.demo;
+
+import "google/protobuf/duration.proto";
+
+message Task {
+  string username = 1;
+
+  google.protobuf.Duration expire_in = 2;
+}

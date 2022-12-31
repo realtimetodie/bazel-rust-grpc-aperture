@@ -1,0 +1,17 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+package(default_visibility = ["//visibility:private"])
+
+filegroup(
+    name = "proto_files",
+    data = glob(["*.proto"]),
+    visibility = ["//proto/aperture:__pkg__"],
+)
+
+proto_library(
+    name = "c_proto",
+    srcs = [ "test.proto"],
+    import_prefix = "aperture/demo/a/b/c",
+    strip_import_prefix = "/proto/aperture/demo/a/b/c",
+    visibility = ["//proto/aperture:__pkg__"],
+)

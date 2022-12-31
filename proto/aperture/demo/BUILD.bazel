@@ -1,0 +1,21 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+package(default_visibility = ["//visibility:private"])
+
+filegroup(
+    name = "proto_files",
+    data = glob(["*.proto"]),
+    visibility = ["//proto/aperture:__pkg__"],
+)
+
+proto_library(
+    name = "demo_proto",
+    srcs = [ "task.proto"],
+    import_prefix = "aperture/demo",
+    strip_import_prefix = "/proto/aperture/demo",
+    deps = ["@com_google_protobuf//:duration_proto"],
+    visibility = [
+        "//proto/aperture:__pkg__",
+        "//proto/aperture/helloworld:__pkg__",
+    ],
+)

@@ -1,0 +1,10 @@
+[package]
+name = "aperture_proto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+prost = "=0.11"
+prost-types = "=0.11"
+prost-derive = "=0.11"
+tonic = "=0.8"

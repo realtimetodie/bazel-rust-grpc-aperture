@@ -1,0 +1,8 @@
+[package]
+name = "rust_proto"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+glob = { git = "https://github.com/rust-lang/glob", rev = "5a5aad93339c8dcf88bf000a1868f0c04ccbf819" }
+tonic-build = "0.8"
